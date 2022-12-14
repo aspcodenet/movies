@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+    <head>
+    <meta charset="UTF-8"/>
+    <title>replace</title>
+</head>
+<body>
+
+Hello    
+<table>
+    <tr th:each="movie : ${Movies}">
+        <td th:text="${movie.getTitle()}"></td>
+        <td th:text="${movie.getDirector()}"></td>
+        <td th:text="${movie.getYear()}"></td>
+        <td th:text="${movie.getGenreName()}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
