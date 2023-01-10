@@ -37,7 +37,7 @@ public class HomeController {
         var allGenres = new ArrayList<Genre>();
         for(Genre r : genreRepository.findAll())
             allGenres.add(r);
-
+ 
         for(Movie m : movieRepository.findAll()){
             movieViewModels.add(new HomeMovie(m.getTitle(), m.getDirector(), m.getYear(), getGenreName(m.getGenre(), allGenres)));
         }
